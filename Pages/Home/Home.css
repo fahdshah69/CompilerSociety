@@ -1,0 +1,189 @@
+@import 'locomotive-scroll/dist/locomotive-scroll.css';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
+    color: black;
+}
+
+.home {
+    /* width: 100vw; */
+    height: 120vh;
+
+    background-image: url("../../Assets/background.jp");
+    background-color: #FFF2D0;
+    background-position: center;
+    background-size: cover;
+    /* background-attachment: scroll; */
+    background-repeat: no-repeat;
+
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0 100px;
+}
+
+.home>nav {
+    margin: 3rem 0;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0 10rem; */
+    /* background-color: gray; */
+}
+
+.home>nav>img {
+    width: 120px;
+    cursor: pointer;
+}
+
+.home>nav>ul>li {
+    display: inline;
+    font-size: large;
+    color: rgb(52, 112, 240);
+
+    margin: 0 1rem;
+
+    cursor: pointer;
+    transition: color 200ms ease;
+}
+
+.home>nav>ul>li:hover {
+    color: rgb(112, 112, 242);
+}
+
+.home>main>.description>h1 {
+    margin-top: 10%;
+    margin-bottom: 2rem;
+    font-size: 65px;
+    color: black;
+}
+
+.home>main>.description>h3 {
+    margin-top: 0.5rem;
+    line-height: 1.8rem;
+    color: black;
+}
+
+.home>main>.description {
+    margin: 0;
+}
+
+.home>main>.socials {
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.home>main>.socials>a>img {
+    margin: 0 1rem;
+    width: 65px;
+}
+
+.home>footer {
+    background-color: green;
+    width: 100%;
+    padding: 1rem;
+}
+
+.home>footer>.socials {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.home>footer>.socials>a>img {
+    margin: 1rem 1rem;
+    width: 30px;
+}
+
+
+.projects {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.projects>h1 {
+    font-size: 65px;
+    margin-bottom: 3rem;
+}
+
+.projects>.projectContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    gap: 2rem;
+}
+
+.projects > .projectContainer > .project {
+    width: 30%;
+    height: 25rem;
+    padding: 1rem;
+    background-color: rgb(30, 30, 30);
+}
+
+.projects > .projectContainer > .project > img {
+    width: 100%;
+}
+
+.merch {
+    height: 100vh;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+}
+
+.merch>.projectContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    gap: 2rem;
+}
+
+.merch > .projectContainer > .project {
+    width: 30%;
+    height: 25rem;
+    padding: 1rem;
+    background-color: rgb(30, 30, 30);
+}
+
+.merch > .projectContainer > .project > button {
+    padding: 3px 15px;
+    position: absolute;
+    bottom: 1rem;
+    margin-top: 3rem;
+    border-radius: 15px;
+    font-size: large;
+    cursor: pointer;
+    border: none;
+    transition: all 500ms ease-in-out;
+    /* transition: color 500ms ease-in-out; */
+}
+.merch > .projectContainer > .project > button:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.merch > .projectContainer > .project > img {
+    width: 100%;
+}
+.merch > h1 {
+    font-size: 65px;
+    margin-bottom: 3rem;
+}
+
+.getInvolved {
+
+}
