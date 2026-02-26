@@ -1,5 +1,9 @@
 @import 'locomotive-scroll/dist/locomotive-scroll.css';
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 * {
     margin: 0;
@@ -11,7 +15,7 @@
 
 .home {
     /* width: 100vw; */
-    min-height: 120vh;
+    height: 120vh;
     /* background-image: url("../../Assets/background.jpg");  Intentionally left commented*/
     background-color: beige;
     background-position: center;
@@ -301,4 +305,215 @@ h3 {
     background-color: rgb(160, 160, 160);
     color: black;
 
+}
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(52, 112, 240);
+    border-radius: 2px;
+    transition: all 300ms ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 1024px) {
+    .home {
+        padding: 0 40px;
+    }
+
+    .home>main>.description>h1 {
+        font-size: 48px;
+    }
+
+    .heading {
+        font-size: 48px;
+    }
+
+    .projects>.projectContainer,
+    .merch>.projectContainer {
+        width: 90%;
+    }
+
+    .projects>.projectContainer>.project,
+    .merch>.projectContainer>.project {
+        width: 45%;
+    }
+
+    .getInvolved>.container {
+        width: 90%;
+        height: auto;
+        padding-bottom: 3rem;
+    }
+
+    .container>img {
+        position: static;
+        transform: none;
+        width: 50%;
+        display: block;
+        margin: 2rem auto 0;
+    }
+}
+
+@media (max-width: 768px) {
+    [data-scroll-speed] {
+        transform: none !important;
+    }
+
+    .home {
+        padding: 0 20px;
+        min-height: 100vh;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .home>nav>ul {
+        display: none;
+        flex-direction: column;
+        gap: 1.2rem;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        right: 0;
+        background-color: beige;
+        padding: 1.5rem 2rem;
+        z-index: 999;
+        border-bottom: 2px solid rgb(52, 112, 240);
+    }
+
+    .home>nav>ul.open {
+        display: flex;
+    }
+
+    .home>nav>ul>li {
+        display: block;
+        margin: 0;
+    }
+
+    .home>nav {
+        position: relative;
+        margin: 1.5rem 0;
+    }
+
+    .home>main>.description>h1 {
+        font-size: 32px;
+        margin-top: 5%;
+    }
+
+    .home>main>.description>h3 {
+        font-size: 13px;
+        line-height: 1.6rem;
+    }
+
+    .heading {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .projects {
+        height: auto;
+        min-height: unset;
+        padding-bottom: 3rem;
+    }
+
+    .projects>.projectContainer,
+    .merch>.projectContainer {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects>.projectContainer>.project,
+    .merch>.projectContainer>.project {
+        width: 90%;
+        height: auto;
+        min-height: 18rem;
+        position: relative;
+    }
+
+    .merch>.projectContainer>.project>button {
+        position: static;
+        margin-top: 1rem;
+    }
+
+    /* About us */
+    .aboutus>.people>.person {
+        max-width: 100%;
+        width: 90%;
+        height: auto;
+        min-height: unset;
+        padding-bottom: 3.5rem;
+    }
+
+    .members>.people>.person {
+        width: 90%;
+    }
+
+    .getInvolved>.container {
+        width: 95%;
+        height: auto;
+        padding: 1.5rem;
+        padding-bottom: 2rem;
+    }
+
+    .container>img {
+        position: static;
+        transform: none;
+        width: 60%;
+        display: block;
+        margin: 2rem auto 0;
+    }
+
+    .getInvolved>.container input,
+    .getInvolved>.container textarea {
+        width: 100% !important;
+    }
+
+    .home>main>.socials>a>img {
+        width: 45px;
+        margin: 0 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home {
+        height: 100vh;
+    }
+    .home>main>.description>h1 {
+        font-size: 26px;
+    }
+
+    .heading {
+        font-size: 26px;
+    }
+
+    .home>nav>img {
+        width: 90px;
+    }
 }
