@@ -235,7 +235,12 @@ h3 {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    border: solid green;
+    backdrop-filter: blur(5px);
+    box-shadow: 1px 1px 34px 2px rgba(255,255,255,0.45);
+
 }
+
 
 .members {
     display: flex;
