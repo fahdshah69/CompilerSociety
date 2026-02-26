@@ -253,14 +253,15 @@ h3 {
 .members>.people>.person {
     background-color: rgb(30, 30, 30);
     padding: 1rem;
+    height: 16rem;
     text-align: center;
     width: 15rem;
 }
 
 .members>.people>.person>img {
 
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
 }
 
