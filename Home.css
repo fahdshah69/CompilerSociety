@@ -269,6 +269,7 @@ h3 {
 .members>.people>.person>img {
 
     box-shadow: 1px 1px 34px 2px rgba(255,255,255,0.45);
+    border: solid green;
     width: 120px;
     height: 120px;
     border-radius: 50%;
