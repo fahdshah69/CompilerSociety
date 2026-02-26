@@ -223,7 +223,7 @@
                 margin-bottom: 1rem;
                 display: block;
                 "></textarea>
-            <button>Submit</button>
+            <button onclick="submit()">Submit</button>
             <img src="../../../Assets/logo.png" alt="Compiler Society">
         </div>
     </div>
@@ -240,6 +240,18 @@
                 navMenu.classList.remove('open');
             });
         });
+        function submit() {
+            let email = document.getElementById("email").value;
+
+            if(!email.includes("@")) {
+                window.alert("Please enter a valid email");
+                return;
+            }
+
+            window.alert("Your response has been submitted. Thank you!");
+        
+        }
+        
     </script>
 </body>
 </html>
