@@ -8,6 +8,8 @@
     <title>The Compiler Society</title>
     <link rel="stylesheet" href="Home.css">
 
+    <link rel="shortcut icon" href="../../Assets/logo.png" type="image/x-icon">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
@@ -20,15 +22,15 @@
 </head>
 
 <body>
-    <div class="home" data-scroll data-scroll-speed="0.5">
+    <div class="home" id="home" data-scroll data-scroll-speed="0.5">
         <nav>
             <img src="../../Assets/logo.png" alt="Compiler Society">
             <ul>
-                <li>Home</li>
-                <li>Projects</li>
-                <li>Merch</li>
-                <li>About Us</li>
-                <li>Get Involved</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#merch">Merch</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#getInvolved">Get Involved</a></li>
             </ul>
         </nav>
         <main>
@@ -54,7 +56,7 @@
         </main>
 
     </div>
-    <div class="projects">
+    <div class="projects" id="projects">
         <h1 class="heading">Stuff we made!</h1>
         <div class="projectContainer" data-scroll data-scroll-speed="0.5">
             <div class="project">
@@ -80,7 +82,7 @@
             </div>
         </div>
     </div>
-    <div class="merch">
+    <div class="merch" id="merch">
         <h1 class="heading">Get on it!</h1>
         <div class="projectContainer" data-scroll data-scroll-speed="0.5">
             <div class="project">
@@ -110,97 +112,122 @@
             </div>
         </div>
     </div>
-    <div class="aboutus">
-        <h1 class="heading">About us, founders!</h1>
+    <div class="aboutus" id="aboutus">
+        <h1 class="heading" style="margin-bottom: 5rem;">About us, founders!</h1>
         <div class="people" style="margin-bottom: 10rem;" data-scroll data-scroll-speed="0.5">
-            <div class="person">
+            <div class="person" style="position: relative;">
                 <h2 style="margin-bottom: 1rem;">Wajeeh Imran</h1>
                     <img src="../../Assets/background.jpg" alt="Wajeeh">
-                    <h3 style="margin: 1rem 0 1rem 0">Gandu</h3>
-                    <h4 style="margin-bottom: 1rem;">Oversees grammatical integrity of all society communications</h4>
-                    <h4>
+                    <h3 style="margin: 1rem 0 1rem 0">President</h3>
+                    <h4 style="margin-bottom: 1rem;">Provides overall leadership and direction, ensuring all teams work
+                        toward shared goals</h4>
+                    <h4 style="position: absolute; bottom: 1rem;">
                         Email: <span style="background-color: rgb(0, 75, 128); cursor: pointer"><a
-                                href="mailto:i250816@isb.nu.edu.pk">Hammad Rehan</a></span>
+                                href="mailto:i250632@isb.nu.edu.pk">Wajeeh Imran</a></span>
                     </h4>
             </div>
-            <div class="person">
+            <div class="person" style="position: relative;">
                 <h2 style="margin-bottom: 1rem;">Hammad Rehan</h1>
-                    <img src="../../Assets/background.jpg" alt="Wajeeh">
+                    <img src="../../Assets/background.jpg" alt="Hammad">
                     <h3 style="margin: 1rem 0 1rem 0">Technical Head</h3>
-                    <h4 style="margin-bottom: 1rem;">Oversees grammatical integrity of all society communications</h4>
-                    <h4>
+                    <h4 style="margin-bottom: 1rem;">Leads the technical team, and ensures high-quality technical
+                        execution of projects and tasks</h4>
+                    <h4 style="position: absolute; bottom: 1rem;">
                         Email: <span style="background-color: rgb(0, 75, 128); cursor: pointer"><a
                                 href="mailto:i250816@isb.nu.edu.pk">Hammad Rehan</a></span>
                     </h4>
             </div>
-            <div class="person">
+            <div class="person" style="position: relative;">
                 <h2 style="margin-bottom: 1rem;">Syed Fahad</h1>
-                    <img src="../../Assets/background.jpg" alt="Wajeeh">
-                    <h3 style="margin: 1rem 0 1rem 0">Narcotics officer</h3>
-                    <h4 style="margin-bottom: 1rem;">Oversees grammatical integrity of all society communications</h4>
-                    <h4>
+                    <img src="../../Assets/background.jpg" alt="Syed Fahad">
+                    <h3 style="margin: 1rem 0 1rem 0">Head Projects</h3>
+                    <h4 style="margin-bottom: 1rem;">Manages project planning and execution, ensuring timely delivery
+                        and effective team collaboration</h4>
+                    <h4 style="position: absolute; bottom: 1rem;">
                         Email: <span style="background-color: rgb(0, 75, 128); cursor: pointer"><a
-                                href="mailto:i250816@isb.nu.edu.pk">Hammad Rehan</a></span>
+                                href="mailto:i250984@isb.nu.edu.pk">Syed Fahad</a></span>
                     </h4>
             </div>
-            <div class="person">
+            <div class="person" style="position: relative;">
                 <h2 style="margin-bottom: 1rem;">Ali Raza</h1>
                     <img src="../../Assets/background.jpg" alt="Wajeeh">
-                    <h3 style="margin: 1rem 0 1rem 0">Butt Sahab</h3>
-                    <h4 style="margin-bottom: 1rem;">Oversees grammatical integrity of all society communications</h4>
-                    <h4>
+                    <h3 style="margin: 1rem 0 1rem 0">Vice president</h3>
+                    <h4 style="margin-bottom: 1rem;">Supports the President in decision-making and operations while
+                        coordinating between different departments</h4>
+                    <h4 style="position: absolute; bottom: 1rem;">
                         Email: <span style="background-color: rgb(0, 75, 128); cursor: pointer"><a
-                                href="mailto:i250816@isb.nu.edu.pk">Hammad Rehan</a></span>
+                                href="mailto:i250632@isb.nu.edu.pk">Ali Raza</a></span>
                     </h4>
             </div>
-            <div class="person">
+            <div class="person" style="position: relative;">
                 <h2 style="margin-bottom: 1rem;">Talha Khusro</h1>
                     <img src="../../Assets/background.jpg" alt="Wajeeh">
                     <h3 style="margin: 1rem 0 1rem 0">Chairman</h3>
-                    <h4 style="margin-bottom: 1rem;">Oversees grammatical integrity of all society communications</h4>
-                    <h4>
+                    <h4 style="margin-bottom: 1rem;">Guides the organization with vision and governance, overseeing
+                        major decisions</h4>
+                    <h4 style="position: absolute; bottom: 1rem;">
                         Email: <span style="background-color: rgb(0, 75, 128); cursor: pointer"><a
-                                href="mailto:i250816@isb.nu.edu.pk">Hammad Rehan</a></span>
+                                href="mailto:i250977@isb.nu.edu.pk">Talha Khusro</a></span>
                     </h4>
             </div>
         </div>
-        <div class="members">
-            <h1 class="heading">Members</h1>
-            <div class="people">
+        <div class="members" style="margin-bottom: 5rem;">
+            <h1 class="heading" style="margin-bottom: 1rem;">Members</h1>
+            <div class="people" data-scroll data-scroll-speed="0.5">
+                <div class="person">
+                    <h3 style="color: white; margin-bottom: 1rem;">Zaheen Masood</h3>
+                    <img src="../../Assets/zaheen.jpeg" style="margin-bottom: 1rem;" alt="">
+                    <h4 style="color: rgb(161, 161, 161)">Email: <a href="mailto:i25xxxx@isb.nu.edu.pk"
+                            style="background-color: rgb(0, 75, 128); cursor: pointer">Zaheen Masood</a></h4>
+                </div>
+                <div class="person">
+                    <h3 style="color: white; margin-bottom: 1rem;">Sher Ali</h3>
+                    <img src="../../Assets/sher.jpeg" style="margin-bottom: 1rem;" alt="">
+                    <h4 style="color: rgb(161, 161, 161)">Email: <a href="mailto:i25xxxx@isb.nu.edu.pk"
+                            style="background-color: rgb(0, 75, 128); cursor: pointer">Sher Ali</a></h4>
+                </div>
+                <div class="person">
+                    <h3 style="color: white; margin-bottom: 1rem;">Zaryab</h3>
+                    <img src="../../Assets/zaryaab.jpeg" style="margin-bottom: 1rem;" alt="">
+                    <h4 style="color: rgb(161, 161, 161)">Email: <a href="mailto:i25xxxx@isb.nu.edu.pk"
+                            style="background-color: rgb(0, 75, 128); cursor: pointer">Zaryab</a></h4>
+                </div>
+                <div class="person">
+                    <h3 style="color: white; margin-bottom: 1rem;">Aoun Abbas</h3>
+                    <img src="../../Assets/aoun.jpeg" style="margin-bottom: 1rem;" alt="">
+                    <h4 style="color: rgb(161, 161, 161)">Email: <a href="mailto:i25xxxx@isb.nu.edu.pk"
+                            style="background-color: rgb(0, 75, 128); cursor: pointer">Arham Shahid</a></h4>
+                </div>
                 <div class="person">
                     <h3 style="color: white; margin-bottom: 1rem;">Arham Shahid</h3>
                     <img src="../../Assets/background.jpg" style="margin-bottom: 1rem;" alt="">
-                    <h4 style="color: rgb(161, 161, 161)">Email: <a href="mailto:i25032@isb.nu.edu.pk" style="background-color: green;">Arham Shahid</a></h4>
+                    <h4 style="color: rgb(161, 161, 161)">Email: <a href="mailto:i25xxxx@isb.nu.edu.pk"
+                            style="background-color: rgb(0, 75, 128); cursor: pointer">Arham Shahid</a></h4>
                 </div>
-                <div class="person">
-                    <h3 style="color: white; margin-bottom: 1rem;">Arham Shahid</h3>
-                    <img src="../../Assets/background.jpg"  style="margin-bottom: 1rem;" alt="">
-                    <h4 style="color: rgb(161, 161, 161)">Email: <a href="mailto:i25032@isb.nu.edu.pk" style="background-color: green;">Arham Shahid</a></h4>
-                </div>
-                <div class="person">
-                    <h3 style="color: white; margin-bottom: 1rem;">Arham Shahid</h3>
-                    <img src="../../Assets/background.jpg"  style="margin-bottom: 1rem;" alt="">
-                    <h4 style="color: rgb(161, 161, 161)">Email: <a href="mailto:i25032@isb.nu.edu.pk" style="background-color: green;">Arham Shahid</a></h4>
-                </div>
-                <div class="person">
-                    <h3 style="color: white; margin-bottom: 1rem;">Arham Shahid</h3>
-                    <img src="../../Assets/background.jpg"  style="margin-bottom: 1rem;" alt="">
-                    <h4 style="color: rgb(161, 161, 161)">Email: <a href="mailto:i25032@isb.nu.edu.pk" style="background-color: green;">Arham Shahid</a></h4>
-                </div>
-                <div class="person">
-                    <h3 style="color: white; margin-bottom: 1rem;">Arham Shahid</h3>
-                    <img src="../../Assets/background.jpg"  style="margin-bottom: 1rem;" alt="">
-                    <h4 style="color: rgb(161, 161, 161)">Email: <a href="mailto:i25032@isb.nu.edu.pk" style="background-color: green;">Arham Shahid</a></h4>
-                </div>
-                <div class="person">
-                    <h3 style="color: white; margin-bottom: 1rem;">Arham Shahid</h3>
-                    <img src="../../Assets/background.jpg"  style="margin-bottom: 1rem;" alt="">
-                    <h4 style="color: rgb(161, 161, 161)">Email: <a href="mailto:i25032@isb.nu.edu.pk" style="background-color: green;">Arham Shahid</a></h4>
-                </div>
+
             </div>
         </div>
     </div>
-    <div class="getInvolved"></div>
+    <div class="getInvolved" id="getInvolved">
+        <h1 class="heading">Come build with us!</h1>
+        <div class="container">
+            <h2 style="color: black;">We would love to have you in our organization <br> Fill out the form below</h2>
+            <br>
+            <h2 style="color: black">Name</h2>
+            <input type="text" style="margin-bottom: 1rem; padding: 5px; width: 240px;">
+            <h2 style="color: black">Email</h2>
+            <input type="text" name="email" id="email" style="margin-bottom: 1rem; padding: 5px; width: 240px;">
+            <h2 style="color: black">Message</h2>
+            <textarea name="message" id="message" style="resize: none; padding: 5px;
+                width: 240px;
+                overflow: auto;
+                height: 60px;
+                margin-bottom: 1rem;
+                display: block;
+                "></textarea>
+            <button>Submit</button>
+        </div>
+    </div>
 
     <script src="Home.js"></script>
 </body>
