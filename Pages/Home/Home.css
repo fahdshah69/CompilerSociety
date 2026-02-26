@@ -269,7 +269,7 @@ h3 {
 }
 
 .getInvolved>.container {
-    background-color: white;
+    background-color: rgb(229, 239, 175);
     position: relative;
     width: 80%;
     /* width: 500px; */
@@ -288,6 +288,13 @@ h3 {
     font-size: large;
     transition: all 200ms ease;
     cursor: pointer;
+}
+.container > img {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
 }
 
 .container>button:hover {
