@@ -1,5 +1,17 @@
 @import 'locomotive-scroll/dist/locomotive-scroll.css';
 
+:root {
+    --pageColor: #f5f5dc;
+    --headingColor: black;
+    --linkColor1: rgb(52, 112, 240);
+    --linkColorHover: rgb(9, 9, 145);
+    --cardColor: rgb(30, 30, 30);
+
+    --feedbackColor: rgb(229, 239, 175);
+    --darkModeTogglerColor: white;
+    --darkModeTogglerBackgroundcolor: white;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -17,7 +29,7 @@ html {
     /* width: 100vw; */
     height: 120vh;
     /* background-image: url("../../Assets/background.jpg");  Intentionally left commented*/
-    background-color: beige;
+    background-color: #f5f5dc; /* beige - section 1 */
     background-position: center;
     background-size: cover;
     /* background-attachment: scroll; */
@@ -58,29 +70,38 @@ html {
     transition: color 200ms ease;
 }
 
-.home>nav>ul>li>a {
+.home>nav>ul>li>a, button {
     text-decoration: none;
     font-size: large;
-    color: rgb(52, 112, 240);
+    color: var(--linkColor1Hover);
     cursor: pointer;
-    transition: color 200ms ease;
+    transition: color 400ms ease;
 }
 
+.home > nav > ul > button {
+    padding: 0.3rem 0.5rem;
+}
+.home > nav > ul > button:hover {
+    color: var(--darkModeTogglerColor1);
+    background-color: var(--darkModeTogglerBackgroundcolor2);
+}
+
+
 .home>nav>ul>li>a:hover {
-    color: rgb(9, 9, 145);
+    color: var(--linkColor1Hover)
 }
 
 .home>main>.description>h1 {
     margin-top: 10%;
     margin-bottom: 2rem;
     font-size: 65px;
-    color: black;
+    color: var(--headingColor1);
 }
 
 .home>main>.description>h3 {
     margin-top: 0.5rem;
     line-height: 1.8rem;
-    color: black;
+    color: var(--headingColor1)
 }
 
 .home>main>.description {
@@ -98,7 +119,7 @@ html {
     width: 65px;
 }
 
-.home>footer {
+/* .home>footer {
     background-color: green;
     width: 100%;
     padding: 1rem;
@@ -108,12 +129,12 @@ html {
     width: 100%;
     margin-top: 1rem;
     text-align: left;
-}
-
+} */
+/* 
 .home>footer>.socials>a>img {
     margin: 1rem 1rem;
     width: 30px;
-}
+} */
 
 h4 {
     color: rgb(161, 161, 161);
@@ -147,7 +168,7 @@ h4 {
 .merch {
     /* height: 100vh; */
     min-height: 100vh;
-    background-color: beige;
+    background-color: white; /* white - section 2 */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -202,6 +223,7 @@ h4 {
 .aboutus {
     /* height: 250vh; */
     /* min-height: 250vh; */
+    background-color: #f5f5dc; /* beige - section 3 */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -277,14 +299,14 @@ h3 {
 
 .getInvolved {
     min-height: 100vh;
-    background-color: beige;
+    background-color: white; /* white - section 4 */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .getInvolved>.container {
-    background-color: rgb(229, 239, 175);
+    background-color: var(--feedbackColor1);
     position: relative;
     width: 80%;
     /* width: 500px; */
@@ -526,4 +548,82 @@ h3 {
     .home>nav>img {
         width: 90px;
     }
+}
+
+html.dark * {
+    color: #e0e0e0;
+}
+
+html.dark .home {
+    background-color: #1a1a2e;
+}
+
+html.dark .merch {
+    background-color: #16213e;
+}
+
+html.dark .aboutus {
+    background-color: #1a1a2e;
+}
+
+html.dark .getInvolved {
+    background-color: #16213e;
+}
+
+html.dark .getInvolved>.container {
+    background-color: #0f3460;
+}
+
+html.dark .getInvolved>.container h2 {
+    /* many modifications in the html file, need overwriting */
+    color: #e0e0e0 !important;
+}
+
+html.dark .getInvolved>.container input,
+html.dark .getInvolved>.container textarea {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    border: 1px solid #0f3460;
+}
+
+html.dark .home>nav>ul {
+    background-color: #1a1a2e;
+}
+
+html.dark .home>nav>ul>li>a {
+    color: #7eb8f7;
+}
+
+html.dark .home>nav>ul>li {
+    color: #7eb8f7;
+}
+
+html.dark #darkmode {
+    color: #e0e0e0;
+    background-color: #0f3460;
+    border: 1px solid #7eb8f7;
+}
+
+html.dark .btn {
+    background-color: #0f3460;
+    color: #e0e0e0;
+}
+
+html.dark .btn:hover {
+    background-color: #7eb8f7;
+    color: #1a1a2e;
+}
+
+html.dark .heading {
+    color: #e0e0e0;
+}
+
+html.dark .container>button {
+    background-color: #0f3460;
+    color: #e0e0e0;
+}
+
+html.dark .container>button:hover {
+    background-color: #7eb8f7;
+    color: #1a1a2e;
 }
