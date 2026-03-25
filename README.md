@@ -29,3 +29,10 @@
 ├── js/              # Script files (logic.js)
 ├── index.html       # Main Landing Page
 └── README.md        # You are here!
+````
+
+
+<p align="center">
+  Built with ☕ and Code by the <b>Compiler Society</b> Technical Team. <br>
+  © 2026 Compiler Society | FAST NUCES Islamabad
+</p>
