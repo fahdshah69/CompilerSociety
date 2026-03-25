@@ -5,7 +5,7 @@
 ## Collaborators
 | Name | Designation | Contributions |Contact Info | 
 | :--- | :----: | :---: | ---: |
-| Fahad Naswari | Senior Narcotics Officer | built the entire Website from the ground up | - |
+| Syed Fahad | Senior Narcotics Officer | built the entire Website from the ground up | - |
 | Hammad Rehan | Technical lead | Created the readMe | - |
 | Ali Raza butt | Chief financial officer| - | - |
 | Wajeeha Imran | President | - | -| 
