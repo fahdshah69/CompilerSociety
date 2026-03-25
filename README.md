@@ -33,6 +33,6 @@
 
 
 <p align="center">
-  Built with ☕ and Code by the <b>Compiler Society</b> Technical Team. <br>
+  Built with ❤️ and Code by the <b>Compiler Society</b> Technical Team. <br>
   © 2026 Compiler Society | FAST NUCES Islamabad
 </p>
