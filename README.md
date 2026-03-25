@@ -19,5 +19,5 @@
 ## Project Status
 | Feature | Status | Lead |
 | :---| --- | ---:|
-|Landing page | + Finished <br> | Fahad - Naswari |
-|Read Me | + Work in progress <br> |Hammad Rehan |
+|Landing page |![Finished](https://img.shields.io/badge/Finished-green) | Fahad - Naswari |
+|Read Me | ![In Progress](https://img.shields.io/badge/In_Progress-orange) |Hammad Rehan |
