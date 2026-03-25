@@ -35,11 +35,12 @@
 ````
 
 ## Get Started With Local Deployment !!! 
+````text
 * _Clone Repo_ git clone [https://github.com/fahdshah69/CompilerSociety]
 * _Open Index.html in your preferred browser_
 * _For Real Time edits use Vs Code Live Server_
 * _Happy Coding ❤️_
-
+````
 
 <p align="center">
   Built with ❤️ and Code by the <b>Compiler Society</b> Technical Team. <br>
