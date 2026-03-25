@@ -1,51 +1,38 @@
-# 🕹️ COMPILER SOCIETY: THE WEBSITE
-### [ STORE PAGE ] | [ COMMUNITY HUB ] | [ REVIEWS ]
+# Compiler Society Website
+### made by Compiler Society's upper presidential body with love <3 
 
-![Header Banner](https://placehold.co/800x300/1b2838/ffffff?text=COMPILER+SOCIETY+WEBSITE)
-*A high-performance, open-world web experience built by the Presidential Body.*
 
----
+## Collaborators
+| Name | Designation | Contributions |Contact Info | 
+| :--- | :----: | :---: | ---: |
+| Syed Fahad | Senior Narcotics Officer | built the entire Website from the ground up | i250984@isb.nu.edu.pk |
+| Hammad Rehan | Technical lead | Created the readMe |i250816@isb.nu.edu.pk|
+| Ali Raza butt | Chief financial officer| - | i250656@isb.nu.edu.pk|
+| Wajeeha Imran | President | - | i250632@isb.nu.edu.pk| 
+| Talha Khusro ghous | Chairman | - | i250977@isb.nu.edu.pk | 
 
-## 📝 ABOUT THIS SOFTWARE
-**Compiler Society Website** is a tactical, multi-layered web platform designed for the students of FAST NUCES. Featuring a high-fidelity user interface and optimized backend logic, it allows users to explore society events, track departmental progress, and engage with the upper management.
+## Languages Used  
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
 
-### 🚀 Key Features:
-* **Next-Gen UI:** Built with raw HTML/CSS for maximum frame rates (load speeds).
-* **Multiplayer Collaboration:** Developed by a team of 5 elite developers and officers.
-* **Open Source World:** Fully transparent codebase for community contributions.
+## Project Status
+| Feature | Status | Lead |
+| :---| --- | ---:|
+|Landing page |![Finished](https://img.shields.io/badge/Finished-green) | Fahad - Naswari |
+|Read Me | ![In Progress](https://img.shields.io/badge/In_Progress-orange) |Hammad Rehan |
 
----
+## Project Structure
+````text
+├── assets/          # Images, Icons, and Media
+├── css/             # Stylesheets (main.css)
+├── js/              # Script files (logic.js)
+├── index.html       # Main Landing Page
+└── README.md        # You are here!
+````
 
-## 🛠️ SYSTEM REQUIREMENTS (FOR DEVELOPERS)
 
-| Minimum | Recommended |
-| :--- | :--- |
-| **OS:** Windows 10 / Linux / MacOS | **OS:** Any Modern OS |
-| **Processor:** Any dual-core CPU | **Processor:** i5-8400 or equivalent |
-| **Memory:** 2 GB RAM | **Memory:** 8 GB RAM |
-| **Graphics:** Integrated Graphics | **Graphics:** NVIDIA GTX 1050 (for smooth VS Code) |
-| **Storage:** 50 MB available space | **Storage:** 100 MB available space |
-
----
-
-## 👥 THE DEVELOPMENT TEAM (COLLABORATORS)
-
-| Profile | Designation | Role in Build |
-| :--- | :--- | :--- |
-| **Fahad Naswari** | Senior Officer | Full-Stack Architect |
-| **Hammad Rehan** | Technical Lead | Systems & Documentation |
-| **Ali Raza Butt** | CFO | Resource Management |
-| **Wajeeha Imran** | President | Project Oversight |
-| **Talha Khusro** | Chairman | Strategic Planning |
-
----
-
-## 📈 RECENT UPDATES (PATCH NOTES)
-* **v1.0.1 Patch:** Fixed a critical bug in the navigation bar.
-* **v1.0.0 Launch:** Initial release of the landing page.
-* **Optimization:** Reduced image file sizes by 40% for faster loading.
-
----
 <p align="center">
-  <img src="https://img.shields.io/badge/STEAM-STORE-blue?style=for-the-badge&logo=steam" />
+  Built with ❤️ and Code by the <b>Compiler Society</b> Technical Team. <br>
+  © 2026 Compiler Society | FAST NUCES Islamabad
 </p>
