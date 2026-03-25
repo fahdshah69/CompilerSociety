@@ -36,10 +36,10 @@
 
 ## Get Started With Local Deployment !!! 
 ````text
-* _Clone Repo_ git clone [https://github.com/fahdshah69/CompilerSociety]
-* _Open Index.html in your preferred browser_
-* _For Real Time edits use Vs Code Live Server_
-* _Happy Coding ❤️_
+ Clone Repo: [git clone https://github.com/fahdshah69/CompilerSociety]
+ Open Index.html in your preferred browser
+ For Real Time edits use Vs Code Live Server
+ Happy Coding ❤️
 ````
 
 <p align="center">
