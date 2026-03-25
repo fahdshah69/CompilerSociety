@@ -1,4 +1,4 @@
-# Compiler Society Website
+# <img src="./assets/favicon.ico" height="32"># Compiler Society Website
 ### made by Compiler Society's upper presidential body with love <3 
 
 
