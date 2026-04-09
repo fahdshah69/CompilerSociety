@@ -5,7 +5,7 @@
 ## Collaborators
 | Name | Designation | Contributions |Contact Info | 
 | :--- | :----: | :---: | ---: |
-| Syed Fahad | Senior Narcotics Officer | built the entire Website from the ground up | i250984@isb.nu.edu.pk |
+| Syed Fahad | Senior Narcotics Officer | Built the entire Website from the ground up | i250984@isb.nu.edu.pk |
 | Hammad Rehan | Technical lead | Created the readMe |i250816@isb.nu.edu.pk|
 | Ali Raza butt | Chief financial officer| - | i250656@isb.nu.edu.pk|
 | Wajeeha Imran | President | - | i250632@isb.nu.edu.pk| 
@@ -22,7 +22,7 @@
 ## Project Status
 | Feature | Status | Lead |
 | :---| --- | ---:|
-|Landing page |![Finished](https://img.shields.io/badge/Finished-green) | Fahad - Naswari |
+|Landing page |![Finished](https://img.shields.io/badge/Finished-green) | Syed Fahad |
 |Read Me | ![In Progress](https://img.shields.io/badge/In_Progress-orange) |Hammad Rehan |
 
 ## Project Structure
