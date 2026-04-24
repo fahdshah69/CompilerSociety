@@ -29,7 +29,8 @@ html {
     /* width: 100vw; */
     height: 120vh;
     /* background-image: url("../../Assets/background.jpg");  Intentionally left commented*/
-    background-color: #f5f5dc; /* beige - section 1 */
+    background-color: #f5f5dc;
+    /* beige - section 1 */
     background-position: center;
     background-size: cover;
     /* background-attachment: scroll; */
@@ -70,7 +71,8 @@ html {
     transition: color 200ms ease;
 }
 
-.home>nav>ul>li>a, button {
+.home>nav>ul>li>a,
+button {
     text-decoration: none;
     font-size: large;
     color: var(--linkColor1Hover);
@@ -78,10 +80,11 @@ html {
     transition: color 400ms ease;
 }
 
-.home > nav > ul > button {
+.home>nav>ul>button {
     padding: 0.3rem 0.5rem;
 }
-.home > nav > ul > button:hover {
+
+.home>nav>ul>button:hover {
     color: var(--darkModeTogglerColor1);
     background-color: var(--darkModeTogglerBackgroundcolor2);
 }
@@ -168,7 +171,8 @@ h4 {
 .merch {
     /* height: 100vh; */
     min-height: 100vh;
-    background-color: white; /* white - section 2 */
+    background-color: white;
+    /* white - section 2 */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -223,7 +227,8 @@ h4 {
 .aboutus {
     /* height: 250vh; */
     /* min-height: 250vh; */
-    background-color: #f5f5dc; /* beige - section 3 */
+    background-color: #f5f5dc;
+    /* beige - section 3 */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -240,7 +245,7 @@ h4 {
 
 .aboutus>.people>.person {
     padding: 1rem 1rem;
-    max-width: 15rem;
+    max-width: 16rem;
     height: 23rem;
     background-color: rgb(30, 30, 30);
     text-align: center;
@@ -259,7 +264,7 @@ h3 {
     border-radius: 50%;
     border: solid green;
     backdrop-filter: blur(5px);
-    box-shadow: 1px 1px 34px 2px rgba(255,255,255,0.45);
+    box-shadow: 1px 1px 34px 2px rgba(255, 255, 255, 0.45);
 
 }
 
@@ -281,7 +286,7 @@ h3 {
 
 .members>.people>.person {
     background-color: rgb(30, 30, 30);
-    
+
     padding: 1rem;
     height: 16rem;
     text-align: center;
@@ -290,7 +295,7 @@ h3 {
 
 .members>.people>.person>img {
 
-    box-shadow: 1px 1px 34px 2px rgba(255,255,255,0.45);
+    box-shadow: 1px 1px 34px 2px rgba(255, 255, 255, 0.45);
     border: solid green;
     width: 120px;
     height: 120px;
@@ -299,7 +304,8 @@ h3 {
 
 .getInvolved {
     min-height: 100vh;
-    background-color: white; /* white - section 4 */
+    background-color: white;
+    /* white - section 4 */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -326,7 +332,8 @@ h3 {
     transition: all 200ms ease;
     cursor: pointer;
 }
-.container > img {
+
+.container>img {
     position: absolute;
     right: 2rem;
     top: 50%;
@@ -339,6 +346,7 @@ h3 {
     color: black;
 
 }
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -537,6 +545,7 @@ h3 {
     .home {
         height: 100vh;
     }
+
     .home>main>.description>h1 {
         font-size: 26px;
     }
