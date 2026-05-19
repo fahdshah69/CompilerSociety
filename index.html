@@ -1,317 +1,483 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
-
-    <!--
-        This is an independant project created as a product of the unofficial Compiler Society.
-        We hope to inspire you with many great projects.
-        Feel free to click on the whatsapp link for the official whatsapp chat of the Compiler Society.
-        If you have any queries, feel free to mail any of the "Founders" by clicking on the Email tag.
-    -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="An unofficial student computing community. Join us to collaborate on projects, build game engines with C++, and tackle complex software projects together.">
-
     <title>The Compiler Society</title>
     <link rel="stylesheet" href="Home.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
 
-    <link rel="icon" type="image/png" href="../Assets/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="../Assets/favicon.svg" />
-    <link rel="shortcut icon" href="../Assets/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../Assets/apple-touch-icon.png" />
-    <link rel="manifest" href="../Assets/site.webmanifest" />
+    <link rel="icon" type="image/png" href="./Assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./Assets/favicon.svg" />
+    <link rel="shortcut icon" href="./Assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./Assets/apple-touch-icon.png" />
+    <link rel="manifest" href="./Assets/site.webmanifest" />
 
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/bundled/locomotive-scroll.min.js"></script>
-    <script>
-        const locomotiveScroll = new LocomotiveScroll();
-    </script>
-
-    <!-- Vercel Web Analytics -->
-    <script>
-        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
+    <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
     <script defer src="/_vercel/insights/script.js"></script>
 
+    <script>document.documentElement.classList.add('js-anim');</script>
 </head>
 
 <body>
-    <div id="bhoot" style="position: fixed; z-index: 69; pointer-events: none;">
-        <h4>Habibi Hamood</h4>
-        <img src="./Assets/hamood.png" alt="Hamood" width="75">
-    </div>
-    <div class="home" id="home" data-scroll data-scroll-speed="0.5">
-        <nav>
-            <img src="./Assets/logo.png" alt="Compiler Society">
 
+    <!-- Scroll progress line -->
+    <div class="scroll-track" aria-hidden="true">
+        <div class="scroll-progress" id="scroll-progress"></div>
+    </div>
+
+    <!-- Nav -->
+    <header class="nav-header" id="nav-header">
+        <nav class="nav-container">
+            <a href="#home" class="nav-logo">
+                <img src="./Assets/logo.png" alt="Compiler Society">
+            </a>
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
-            <ul id="nav-menu">
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="#home">Home</a></li>
-                <!--Intentionally left commented-->
-                <!-- <li><a href="#projects">Projects</a></li> -->
-                <li><a href="#merch">Merch</a></li>
-                <li><a href="#aboutus">About Us</a></li>
-                <li><a href="#getInvolved">Get Involved</a></li>
-                <button id="darkmode">Dark Mode</button>
+                <li><a href="#founders">Leadership</a></li>
+                <li><a href="#members">Members</a></li>
+                <li><a href="#getInvolved">Join</a></li>
+                <li>
+                    <button id="darkmode" class="theme-toggle" aria-label="Toggle theme">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <circle cx="12" cy="12" r="5" />
+                            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                        </svg>
+                    </button>
+                </li>
             </ul>
         </nav>
-        <main>
-            <div class="description" data-scroll data-scroll-speed="0.5">
-                <h1>The Compiler Society</h1>
-                <h3>Compiling wild ideas into reality, one broken line of code at a time </h3>
-                <h3 style="text-align: right;">
-                    We're an unofficial crew of developers, tinkerers, and tech enthusiasts
-                </h3>
-                <h3>Forget the stiff networking events—we are here to actually build stuff </h3>
-                <h3 style="text-align: right;">
-                    Grab a seat, open your laptop, and let's see what we can create today.
-                </h3>
+    </header>
 
-            </div>
-            <div class="socials" data-scroll data-scroll-speed="0.5">
-                <a href="https://instagram.com/compilersociety"><img src="../../Assets/instagram.svg"
-                        alt="Instagram"></a>
-                <a href="https://instagram.com/compilersociety"><img src="../../Assets/facebook.svg" alt="Facebook"></a>
-                <a href="https://chat.whatsapp.com/FXt2Yu3Pqtm5TgumPOXD9Z"><img src="../../Assets/whatsapp.svg"
-                        alt="Whatsapp"></a>
+    <!-- ══════════════════════════════════════════════════
+         1. HERO
+    ══════════════════════════════════════════════════ -->
+    <section class="hero" id="home">
+        <div class="hero-inner">
+            <div class="hero-tag">
+                <span class="badge-dot"></span>
+                <span>Student Computing Community · NUCES Islamabad</span>
             </div>
 
-        </main>
+            <h1 class="hero-title">
+                <span class="title-line line-1">The Compiler</span>
+                <span class="title-line line-2">Society.</span>
+            </h1>
 
-    </div>
-    <!--We will add projects later on-->
-    <!-- <div class="projects" id="projects">
-        <h1 class="heading">Stuff we made!</h1>
-        <div class="projectContainer" data-scroll data-scroll-speed="0.5">
-            <div class="project">
-                <img src="../../Assets/background.jpg" alt="">
-                <h2 style="color: rgb(227, 227, 227);">Project Name</h2>
-                <br>
-                <h4 style="color: rgb(161, 161, 161)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                    aperiam est </h4>
-                <button class="btn"><a href="#" style="text-decoration: none;">Github</a></button>
-            </div>
-            <div class="project">
-                <img src="../../Assets/background.jpg" alt="">
-                <h2 style="color: rgb(227, 227, 227);">Project Name</h2>
-                <br>
-                <h4 style="color: rgb(161, 161, 161)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                    aperiam est </h4>
-                <button class="btn"><a href="#" style="text-decoration: none;">Github</a></button>
-            </div>
-            <div class="project">
-                <img src="../../Assets/background.jpg" alt="">
-                <h2 style="color: rgb(227, 227, 227);">Project Name</h2>
-                <br>
-                <h4 style="color: rgb(161, 161, 161)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                    aperiam est </h4>
-                <button class="btn"><a href="#" style="text-decoration: none;">Github</a></button>
+            <div class="hero-footer">
+                <div class="hero-socials">
+                    <a href="https://instagram.com/compilersociety" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://instagram.com/compilersociety" target="_blank" rel="noopener" aria-label="Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://chat.whatsapp.com/FXt2Yu3Pqtm5TgumPOXD9Z" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                        </svg>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+                <a href="#intro" class="scroll-hint" aria-label="Scroll to intro">
+                    <span>Scroll</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="scroll-arrow" aria-hidden="true">
+                        <line x1="12" y1="5" x2="12" y2="19" />
+                        <polyline points="19 12 12 19 5 12" />
+                    </svg>
+                </a>
             </div>
         </div>
-    </div> -->
-    <div class="merch" id="merch">
-        <h1 class="heading">Get on it!</h1>
-        <div class="projectContainer" data-scroll data-scroll-speed="0.5">
-            <div class="project">
-                <img src="../../Assets/background.jpg" alt="">
-                <h2 style="color: rgb(227, 227, 227);">Product Name</h2>
-                <br>
-                <h4 style="color: rgb(161, 161, 161)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                    aperiam est </h4>
-                <button class="btn">Order</button>
-            </div>
+        <div class="hero-grid" aria-hidden="true"></div>
+    </section>
 
-            <div class="project">
-                <img src="../../Assets/background.jpg" alt="">
-                <h2 style="color: rgb(227, 227, 227);">Product Name</h2>
-                <br>
-                <h4 style="color: rgb(161, 161, 161)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                    aperiam est </h4>
-                <button class="btn">Order</button>
-            </div>
-            <div class="project">
-                <img src="../../Assets/background.jpg" alt="">
-                <h2 style="color: rgb(227, 227, 227);">Product Name</h2>
-                <br>
-                <h4 style="color: rgb(161, 161, 161)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                    aperiam est </h4>
-                <button class="btn">Order</button>
-            </div>
+    <!-- ══════════════════════════════════════════════════
+         2. INTRO — scroll-driven word reveal
+    ══════════════════════════════════════════════════ -->
+    <section class="intro-section" id="intro">
+        <div class="intro-inner">
+            <p class="intro-body">Compiling wild ideas into reality, one broken line of code at a time. We're an unofficial crew of developers, tinkerers, and tech enthusiasts. Forget the stiff networking events — we're here to actually build stuff.</p>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         3. FOUNDERS BRIDGE
+    ══════════════════════════════════════════════════ -->
+    <div class="founders-bridge" id="founders">
+        <div class="bridge-inner">
+            <span class="section-label">Leadership</span>
+            <h2 class="bridge-title">The Founders.</h2>
+            <p class="bridge-sub">Five people who made it happen.</p>
         </div>
     </div>
-    <div class="aboutus" id="aboutus">
-        <h1 class="heading" style="margin-bottom: 5rem;">About us, founders!</h1>
-        <div class="people" style="margin-bottom: 10rem;" data-scroll data-scroll-speed="0.5">
-            <div class="person" style="position: relative;">
-                <h2 style="margin-bottom: 1rem;">Wajeeh Imran</h1>
-                    <img src="../../Assets/wajeeh.jpg" alt="Wajeeh">
-                    <h3 style="margin: 1rem 0 1rem 0">President</h3>
-                    <h4 style="margin-bottom: 1rem;">Provides overall leadership and direction, ensuring all teams work
-                        toward shared goals</h4>
-                    <h4 style="position: absolute; bottom: 1rem;">
-                        Email: <span style="background-color: rgb(0, 75, 128); cursor: pointer"><a
-                                href="mailto:i250632@isb.nu.edu.pk">Wajeeh Imran</a></span>
-                    </h4>
+
+    <!-- ══════════════════════════════════════════════════
+         4. FOUNDER SECTIONS (each 100vh)
+    ══════════════════════════════════════════════════ -->
+
+    <!-- 01 Wajeeh Imran — content left, photo right -->
+    <section class="founder-section" id="founder-1">
+        <div class="founder-content">
+            <div class="founder-meta">
+                <span class="founder-index">01 / 05</span>
+                <span class="founder-badge">President</span>
             </div>
-            <div class="person" style="position: relative;">
-                <h2 style="margin-bottom: 1rem;">Hammad Rehan</h1>
-                    <img src="../../Assets/hammad.jpg" alt="Hammad">
-                    <h3 style="margin: 1rem 0 1rem 0">Technical Head</h3>
-                    <h4 style="margin-bottom: 1rem;">Leads the technical team, and ensures high-quality technical
-                        execution of projects and tasks</h4>
-                    <h4 style="position: absolute; bottom: 1rem;">
-                        Email: <span style="background-color: rgb(0, 75, 128); cursor: pointer"><a
-                                href="mailto:i250816@isb.nu.edu.pk">Hammad Rehan</a></span>
-                    </h4>
+            <h2 class="founder-name">Wajeeh<br>Imran</h2>
+            <p class="founder-bio">Provides overall leadership and direction, ensuring all teams work toward shared goals.</p>
+            <a href="mailto:i250632@isb.nu.edu.pk" class="founder-email">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                </svg>
+                i250632@isb.nu.edu.pk
+            </a>
+        </div>
+        <div class="founder-visual">
+            <img src="./Assets/wajeeh.jpg" alt="Wajeeh Imran" loading="lazy">
+        </div>
+    </section>
+
+    <!-- 02 Hammad Rehan — photo left, content right -->
+    <section class="founder-section is-reversed" id="founder-2">
+        <div class="founder-content">
+            <div class="founder-meta">
+                <span class="founder-index">02 / 05</span>
+                <span class="founder-badge">Technical Head</span>
             </div>
-            <div class="person" style="position: relative;">
-                <h2 style="margin-bottom: 1rem;">Syed Fahad</h1>
-                    <img src="../../Assets/fahad.jpg" alt="Syed Fahad">
-                    <h3 style="margin: 1rem 0 1rem 0">Head Projects</h3>
-                    <h4 style="margin-bottom: 1rem;">Manages project planning and execution, ensuring timely delivery
-                        and effective team collaboration</h4>
-                    <h4 style="position: absolute; bottom: 1rem;">
-                        Email: <span style="background-color: rgb(0, 75, 128); cursor: pointer"><a
-                                href="mailto:i250984@isb.nu.edu.pk">Syed Fahad</a></span>
-                    </h4>
+            <h2 class="founder-name">Hammad<br>Rehan</h2>
+            <p class="founder-bio">Leads the technical team, ensuring high-quality execution of all projects and tasks.</p>
+            <a href="mailto:i250816@isb.nu.edu.pk" class="founder-email">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                </svg>
+                i250816@isb.nu.edu.pk
+            </a>
+        </div>
+        <div class="founder-visual">
+            <img src="./Assets/hammad.jpg" alt="Hammad Rehan" loading="lazy">
+        </div>
+    </section>
+
+    <!-- 03 Syed Fahad — content left, photo right -->
+    <section class="founder-section" id="founder-3">
+        <div class="founder-content">
+            <div class="founder-meta">
+                <span class="founder-index">03 / 05</span>
+                <span class="founder-badge">Head of Projects</span>
             </div>
-            <div class="person" style="position: relative;">
-                <h2 style="margin-bottom: 1rem;">Ali Raza</h1>
-                    <img src="../../Assets/ali.jpg" alt="Ali">
-                    <h3 style="margin: 1rem 0 1rem 0">Vice president</h3>
-                    <h4 style="margin-bottom: 1rem;">Supports the President in decision-making and operations while
-                        coordinating between different departments</h4>
-                    <h4 style="position: absolute; bottom: 1rem;">
-                        Email: <span style="background-color: rgb(0, 75, 128); cursor: pointer"><a
-                                href="mailto:i250656@isb.nu.edu.pk">Ali Raza</a></span>
-                    </h4>
+            <h2 class="founder-name">Syed<br>Fahad</h2>
+            <p class="founder-bio">Manages project planning and execution, ensuring timely delivery and effective team collaboration.</p>
+            <a href="mailto:i250984@isb.nu.edu.pk" class="founder-email">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                </svg>
+                i250984@isb.nu.edu.pk
+            </a>
+        </div>
+        <div class="founder-visual">
+            <img src="./Assets/fahad.jpg" alt="Syed Fahad" loading="lazy">
+        </div>
+    </section>
+
+    <!-- 04 Ali Raza — photo left, content right -->
+    <section class="founder-section is-reversed" id="founder-4">
+        <div class="founder-content">
+            <div class="founder-meta">
+                <span class="founder-index">04 / 05</span>
+                <span class="founder-badge">Vice President</span>
             </div>
-            <div class="person" style="position: relative;">
-                <h2 style="margin-bottom: 1rem;">Talha Khusro</h1>
-                    <img src="../../Assets/talha.jpg" alt="Talha">
-                    <h3 style="margin: 1rem 0 1rem 0">Chairman</h3>
-                    <h4 style="margin-bottom: 1rem;">Guides the organization with vision and governance, overseeing
-                        major decisions</h4>
-                    <h4 style="position: absolute; bottom: 1rem;">
-                        Email: <span style="background-color: rgb(0, 75, 128); cursor: pointer"><a
-                                href="mailto:i250977@isb.nu.edu.pk">Talha Khusro</a></span>
-                    </h4>
+            <h2 class="founder-name">Ali<br>Raza</h2>
+            <p class="founder-bio">Supports the President in decision-making and operations while coordinating between departments.</p>
+            <a href="mailto:i250656@isb.nu.edu.pk" class="founder-email">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                </svg>
+                i250656@isb.nu.edu.pk
+            </a>
+        </div>
+        <div class="founder-visual">
+            <img src="./Assets/ali.jpg" alt="Ali Raza" loading="lazy">
+        </div>
+    </section>
+
+    <!-- 05 Talha Khusro — content left, photo right -->
+    <section class="founder-section" id="founder-5">
+        <div class="founder-content">
+            <div class="founder-meta">
+                <span class="founder-index">05 / 05</span>
+                <span class="founder-badge">Chairman</span>
+            </div>
+            <h2 class="founder-name">Talha<br>Khusro</h2>
+            <p class="founder-bio">Guides the organization with vision and governance, overseeing all major decisions.</p>
+            <a href="mailto:i250977@isb.nu.edu.pk" class="founder-email">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                </svg>
+                i250977@isb.nu.edu.pk
+            </a>
+        </div>
+        <div class="founder-visual">
+            <img src="./Assets/talha.jpg" alt="Talha Khusro" loading="lazy">
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         5. MEMBERS WALL
+    ══════════════════════════════════════════════════ -->
+    <section class="members-section" id="members">
+        <div class="members-inner">
+            <div class="members-hd">
+                <span class="section-label">Team</span>
+                <h2 class="members-title">Members.</h2>
+            </div>
+            <div class="members-wall">
+                <div class="member-wall-card">
+                    <div class="mwc-img">
+                        <img src="./Assets/affan.jpeg" alt="Affan Ahmed" loading="lazy">
+                    </div>
+                    <h3>Affan Ahmed</h3>
+                    <a href="mailto:i252526@isb.nu.edu.pk" class="mwc-email">i252526@isb.nu.edu.pk</a>
+                </div>
+                <div class="member-wall-card">
+                    <div class="mwc-img">
+                        <img src="./Assets/arham.jpeg" alt="Arham Shahid" loading="lazy">
+                    </div>
+                    <h3>Arham Shahid</h3>
+                    <a href="mailto:i250605@isb.nu.edu.pk" class="mwc-email">i250605@isb.nu.edu.pk</a>
+                </div>
+                <div class="member-wall-card">
+                    <div class="mwc-img">
+                        <img src="./Assets/zaheen.jpeg" alt="Zaheen Masood" loading="lazy">
+                    </div>
+                    <h3>Zaheen Masood</h3>
+                    <a href="mailto:i250649@isb.nu.edu.pk" class="mwc-email">i250649@isb.nu.edu.pk</a>
+                </div>
+                <div class="member-wall-card">
+                    <div class="mwc-img">
+                        <img src="./Assets/sher.jpeg" alt="Sher Ali" loading="lazy">
+                    </div>
+                    <h3>Sher Ali</h3>
+                    <a href="mailto:i250885@isb.nu.edu.pk" class="mwc-email">i250885@isb.nu.edu.pk</a>
+                </div>
+                <div class="member-wall-card">
+                    <div class="mwc-img">
+                        <img src="./Assets/zaryaab.jpeg" alt="Zaryab" loading="lazy">
+                    </div>
+                    <h3>Zaryab</h3>
+                    <a href="mailto:i250553@isb.nu.edu.pk" class="mwc-email">i250553@isb.nu.edu.pk</a>
+                </div>
+                <div class="member-wall-card">
+                    <div class="mwc-img">
+                        <img src="./Assets/aoun.jpeg" alt="Aoun Abbas" loading="lazy">
+                    </div>
+                    <h3>Aoun Abbas</h3>
+                    <a href="mailto:i250701@isb.nu.edu.pk" class="mwc-email">i250701@isb.nu.edu.pk</a>
+                </div>
+                <div class="member-wall-card">
+                    <div class="mwc-img">
+                        <img src="./Assets/abdullah.jpeg" alt="Abdullah Khalid" loading="lazy">
+                    </div>
+                    <h3>Abdullah Khalid</h3>
+                    <a href="mailto:i250844@isb.nu.edu.pk" class="mwc-email">i250844@isb.nu.edu.pk</a>
+                </div>
+                <div class="member-wall-card">
+                    <div class="mwc-img">
+                        <img src="./Assets/khubaib.jpeg" alt="Khubaib Tahir" loading="lazy">
+                    </div>
+                    <h3>Khubaib Tahir</h3>
+                    <a href="mailto:i250755@isb.nu.edu.pk" class="mwc-email">i250755@isb.nu.edu.pk</a>
+                </div>
+                <div class="member-wall-card">
+                    <div class="mwc-img">
+                        <img src="./Assets/ismail.jpeg" alt="Muhammad Ismail" loading="lazy">
+                    </div>
+                    <h3>Muhammad Ismail</h3>
+                    <a href="mailto:i250579@isb.nu.edu.pk" class="mwc-email">i250579@isb.nu.edu.pk</a>
+                </div>
             </div>
         </div>
-        <div class="members" style="margin-bottom: 5rem;">
-            <h1 class="heading" style="margin-bottom: 1rem;">Members</h1>
-            <div class="people" data-scroll data-scroll-speed="0.5">
-                <div class="person">
-                    <h3 style="color: white; margin-bottom: 1rem;">Affan Ahmed</h3>
-                    <img src="../../Assets/affan.jpeg" style="margin-bottom: 1rem;" alt="Affan Ahmed">
-                    <h4 style="color: rgb(161, 161, 161); text-align: left; margin-top:1.5rem;">Email: <a
-                            href="mailto:i252526@isb.nu.edu.pk"
-                            style="background-color: rgb(0, 75, 128); cursor: pointer">Affan Ahmed</a></h4>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         6. JOIN
+    ══════════════════════════════════════════════════ -->
+    <section class="join-section" id="getInvolved">
+        <div class="join-inner">
+            <div class="join-headline">
+                <span class="section-label">Join</span>
+                <h2>Come build<br>with us.</h2>
+                <p>We'd love to have you in our organization.<br>Fill out the form and we'll be in touch.</p>
+            </div>
+            <form class="join-form" id="joinForm" novalidate>
+                <div class="field-group">
+                    <label for="nameInput">Name</label>
+                    <input type="text" id="nameInput" placeholder="Syed Fahad" autocomplete="name">
                 </div>
-                <div class="person">
-                    <h3 style="color: white; margin-bottom: 1rem;">Arham Shahid</h3>
-                    <img src="../../Assets/arham.jpeg" style="margin-bottom: 1rem;" alt="Arham Shahid">
-                    <h4 style="color: rgb(161, 161, 161); text-align: left; margin-top:1.5rem;">Email: <a
-                            href="mailto:i250605@isb.nu.edu.pk"
-                            style="background-color: rgb(0, 75, 128); cursor: pointer">Arham Shahid</a></h4>
+                <div class="field-group">
+                    <label for="emailInput">Email</label>
+                    <input type="email" id="emailInput" placeholder="fahad@mail.com" autocomplete="email">
                 </div>
-                <div class="person">
-                    <h3 style="color: white; margin-bottom: 1rem;">Zaheen Masood</h3>
-                    <img src="../../Assets/zaheen.jpeg" style="margin-bottom: 1rem;" alt="Zaheen Masood">
-                    <h4 style="color: rgb(161, 161, 161); text-align: left; margin-top:1.5rem;">Email: <a
-                            href="mailto:i250649@isb.nu.edu.pk"
-                            style="background-color: rgb(0, 75, 128); cursor: pointer">Zaheen Masood</a></h4>
+                <div class="field-group">
+                    <label for="messageInput">Message</label>
+                    <textarea id="messageInput" placeholder="Tell us what you'd like to build..." rows="4"></textarea>
                 </div>
-                <div class="person">
-                    <h3 style="color: white; margin-bottom: 1rem;">Sher Ali</h3>
-                    <img src="../../Assets/sher.jpeg" style="margin-bottom: 1rem;" alt="Sher Ali">
-                    <h4 style="color: rgb(161, 161, 161); text-align: left; margin-top:1.5rem;">Email: <a
-                            href="mailto:i250885@isb.nu.edu.pk"
-                            style="background-color: rgb(0, 75, 128); cursor: pointer">Sher Ali</a></h4>
-                </div>
-                <div class="person">
-                    <h3 style="color: white; margin-bottom: 1rem;">Zaryab</h3>
-                    <img src="../../Assets/zaryaab.jpeg" style="margin-bottom: 1rem;" alt="Zaryab">
-                    <h4 style="color: rgb(161, 161, 161); text-align: left; margin-top:1.5rem;">Email: <a
-                            href="mailto:i250553@isb.nu.edu.pk"
-                            style="background-color: rgb(0, 75, 128); cursor: pointer">Zaryab</a></h4>
-                </div>
-                <div class="person">
-                    <h3 style="color: white; margin-bottom: 1rem;">Aoun Abbas</h3>
-                    <img src="../../Assets/aoun.jpeg" style="margin-bottom: 1rem;" alt="Aoun Abbas">
-                    <h4 style="color: rgb(161, 161, 161); text-align: left; margin-top:1.5rem;">Email: <a
-                            href="mailto:i250701@isb.nu.edu.pk"
-                            style="background-color: rgb(0, 75, 128); cursor: pointer">Aoun Abbas</a></h4>
-                </div>
-                <div class="person">
-                    <h3 style="color: white; margin-bottom: 1rem;">Abdullah Khalid</h3>
-                    <img src="../../Assets/abdullah.jpeg" style="margin-bottom: 1rem;" alt="Abdullah Khalid">
-                    <h4 style="color: rgb(161, 161, 161); text-align: left; margin-top:1.5rem;">Email: <a
-                            href="mailto:i250844@isb.nu.edu.pk"
-                            style="background-color: rgb(0, 75, 128); cursor: pointer">Abdullah Khalid</a></h4>
-                </div>
-                <div class="person">
-                    <h3 style="color: white; margin-bottom: 1rem;">Khubaib Tahir</h3>
-                    <img src="../../Assets/khubaib.jpeg" style="margin-bottom: 1rem;" alt="Khubaib Tahir">
-                    <h4 style="color: rgb(161, 161, 161); text-align: left; margin-top:1.5rem;">Email: <a
-                            href="mailto:i250755@isb.nu.edu.pk"
-                            style="background-color: rgb(0, 75, 128); cursor: pointer">Khubaib Tahir</a></h4>
-                </div>
-                <div class="person">
-                    <h3 style="color: white; margin-bottom: 1rem;">Muhammad Ismail</h3>
-                    <img src="../../Assets/ismail.jpeg" style="margin-bottom: 1rem;" alt="Muhammad Ismail">
-                    <h4 style="color: rgb(161, 161, 161); text-align: left; margin-top:1.5rem;">Email: <a
-                            href="mailto:i250579@isb.nu.edu.pk"
-                            style="background-color: rgb(0, 75, 128); cursor: pointer">M. Ismail</a></h4>
-                </div>
+                <button type="submit" class="btn-submit">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <img src="./Assets/logo.png" alt="Compiler Society" class="footer-logo">
+            <p>© 2025 The Compiler Society. An unofficial student computing community.</p>
+            <div class="footer-socials">
+                <a href="https://instagram.com/compilersociety" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    </svg>
+                </a>
+                <a href="https://chat.whatsapp.com/FXt2Yu3Pqtm5TgumPOXD9Z" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                    </svg>
+                </a>
             </div>
         </div>
-    </div>
-    <div class="getInvolved" id="getInvolved">
-        <h1 class="heading">Come build with us!</h1>
-        <div class="container">
-            <h2 style="color: black;">We would love to have you in our organization <br> Fill out the form below</h2>
-            <br>
-            <h2 style="color: black">Name</h2>
-            <input type="text" placeholder="Syed Fahad" style="margin-bottom: 1rem; padding: 5px; width: 240px;">
-            <h2 style="color: black">Email</h2>
-            <input type="text" placeholder="fahad@mail.com" name="email" id="email"
-                style="margin-bottom: 1rem; padding: 5px; width: 240px;">
-            <h2 style="color: black">Message</h2>
-            <textarea name="message" placeholder="Suggestions/Message" id="message" style="resize: none; padding: 5px;
-                width: 240px;
-                overflow: auto;
-                height: 60px;
-                margin-bottom: 1rem;
-                display: block;
-                "></textarea>
-            <button onclick="submit()">Submit</button>
-            <img src="../../../Assets/logo.png" alt="Compiler Society">
-        </div>
-    </div>
+    </footer>
+
+    <!-- ══════════════════════════════════════════════════
+         GSAP + ScrollTrigger (UMD — works with file://)
+    ══════════════════════════════════════════════════ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        onerror="document.documentElement.classList.remove('js-anim')"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script>
+        if (typeof gsap !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+            const E = "power3.out";
+
+            // ── Hero entrance ────────────────────────────────────────────────────
+            gsap.timeline({ defaults: { ease: E } })
+                .fromTo(".nav-header",  { y: -20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6  }, 0)
+                .fromTo(".hero-tag",    { y: 12,  opacity: 0 }, { y: 0, opacity: 1, duration: 0.55 }, 0.1)
+                .fromTo(".line-1",      { y: 80,  opacity: 0 }, { y: 0, opacity: 1, duration: 1.05 }, 0.2)
+                .fromTo(".line-2",      { y: 80,  opacity: 0 }, { y: 0, opacity: 1, duration: 1.05 }, 0.34)
+                .fromTo(".hero-footer", { y: 20,  opacity: 0 }, { y: 0, opacity: 1, duration: 0.65 }, 0.58);
+
+            // ── Intro: word-by-word scroll reveal (scrub) ────────────────────────
+            const introBody = document.querySelector('.intro-body');
+            const introWords = introBody.textContent.split(/\s+/).filter(Boolean);
+            introBody.innerHTML = introWords.map(w => `<span class="w">${w}</span>`).join(' ');
+            gsap.set('.intro-body .w', { opacity: 0.12 });
+            gsap.to('.intro-body .w', {
+                opacity: 1,
+                stagger: 0.05,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.intro-section',
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: 2
+                }
+            });
+
+            // ── Founders bridge ──────────────────────────────────────────────────
+            gsap.fromTo('.bridge-inner',
+                { y: 40, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.8, ease: E,
+                  scrollTrigger: { trigger: '.founders-bridge', start: 'top 80%', once: true } }
+            );
+
+            // ── Founder sections: photo + content slide in ───────────────────────
+            gsap.utils.toArray('.founder-section').forEach(section => {
+                const rev = section.classList.contains('is-reversed');
+                const visual  = section.querySelector('.founder-visual');
+                const content = section.querySelector('.founder-content');
+
+                const tl = gsap.timeline({
+                    scrollTrigger: { trigger: section, start: 'top 72%', once: true }
+                });
+                tl.fromTo(visual,
+                    { x: rev ? -60 : 60, opacity: 0 },
+                    { x: 0, opacity: 1, duration: 0.9, ease: E }
+                ).fromTo(
+                    content.querySelectorAll('.founder-meta, .founder-name, .founder-bio, .founder-email'),
+                    { y: 28, opacity: 0 },
+                    { y: 0, opacity: 1, stagger: 0.1, duration: 0.65, ease: E }
+                , '-=0.55');
+            });
+
+            // ── Members wall: stagger grid ───────────────────────────────────────
+            gsap.fromTo('.members-hd',
+                { y: 30, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.7, ease: E,
+                  scrollTrigger: { trigger: '.members-hd', start: 'top 85%', once: true } }
+            );
+            gsap.fromTo('.member-wall-card',
+                { y: 28, opacity: 0 },
+                { y: 0, opacity: 1, stagger: 0.07, duration: 0.5, ease: E,
+                  scrollTrigger: { trigger: '.members-wall', start: 'top 85%', once: true } }
+            );
+
+            // ── Join section ─────────────────────────────────────────────────────
+            gsap.fromTo('.join-headline',
+                { y: 40, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.8, ease: E,
+                  scrollTrigger: { trigger: '.join-section', start: 'top 80%', once: true } }
+            );
+            gsap.fromTo('.join-form',
+                { y: 40, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.8, ease: E, delay: 0.18,
+                  scrollTrigger: { trigger: '.join-section', start: 'top 80%', once: true } }
+            );
+        }
+    </script>
+
+    <script>
+        // ── Scroll progress bar ───────────────────────────────────────────────────
+        const progressBar = document.getElementById('scroll-progress');
+        window.addEventListener('scroll', () => {
+            const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+            progressBar.style.transform = `scaleX(${pct / 100})`;
+        }, { passive: true });
+
+        // ── Sticky nav backdrop ───────────────────────────────────────────────────
+        const navHeader = document.getElementById('nav-header');
+        window.addEventListener('scroll', () => {
+            navHeader.classList.toggle('scrolled', window.scrollY > 60);
+        }, { passive: true });
+
+        // ── Hamburger ─────────────────────────────────────────────────────────────
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
-
-        let darkModeToggler = document.getElementById("darkmode");
-        let isDark = false;
-
-        darkModeToggler.addEventListener('click', () => {
-            isDark = !isDark; // Switch between them
-            document.documentElement.classList.toggle('dark', isDark);
-            darkModeToggler.textContent = isDark ? "Light Mode" : "Dark Mode";
-        });
-
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('open');
@@ -322,41 +488,32 @@
                 navMenu.classList.remove('open');
             });
         });
-        function submit() {
-            let email = document.getElementById("email").value;
 
-            if (!email.includes("@")) {
-                window.alert("Please enter a valid email");
+        // ── Theme toggle ──────────────────────────────────────────────────────────
+        const themeBtn = document.getElementById('darkmode');
+        const root = document.documentElement;
+        const sunSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>`;
+        const moonSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+        themeBtn.innerHTML = sunSVG;
+        themeBtn.addEventListener('click', () => {
+            root.classList.toggle('dark');
+            themeBtn.innerHTML = root.classList.contains('dark') ? sunSVG : moonSVG;
+        });
+
+        // ── Scroll hint bounce ────────────────────────────────────────────────────
+        // Handled via CSS @keyframes on .scroll-arrow
+
+        // ── Form submit ───────────────────────────────────────────────────────────
+        document.getElementById('joinForm').addEventListener('submit', e => {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value.trim();
+            if (!email || !email.includes('@')) {
+                alert('Please enter a valid email address.');
                 return;
             }
-
-            window.alert("Your response has been submitted. Thank you!");
-        }
-
-        let cursorImage = document.getElementById('bhoot');
-
-        let mouseX = 0;
-        let mouseY = 0;
-
-        let currentX = 0;
-        let currentY = 0;
-
-        document.addEventListener('mousemove', function (event) {
-            mouseX = event.clientX;
-            mouseY = event.clientY;
+            alert('Your application has been submitted. Thank you!');
         });
-        function animateCursor() {
-            const speed = 0.1;
-
-            currentX += (mouseX - currentX) * speed;
-            currentY += (mouseY - currentY) * speed;
-
-            cursorImage.style.transform = `translate(calc(${currentX}px - 50%), calc(${currentY}px - 50%))`;
-
-            requestAnimationFrame(animateCursor);
-        }
-        animateCursor();
     </script>
-</body>
 
+</body>
 </html>
