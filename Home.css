@@ -42,7 +42,9 @@ html.js-anim .founder-email,
 html.js-anim .members-hd,
 html.js-anim .member-wall-card,
 html.js-anim .join-headline,
-html.js-anim .join-form { opacity: 0; }
+html.js-anim .join-form,
+html.js-anim .projects-hd,
+html.js-anim .project-card { opacity: 0; }
 
 /* ═══════════════════════════════════════════════════════════════
    Reset & base
@@ -389,6 +391,123 @@ html:not(.dark) .nav-header.scrolled {
 }
 .mwc-email:hover { color: var(--accent); }
 
+/* ═════════════════════════════════════════════════════════════════
+   6. PROJECTS
+   ═════════════════════════════════════════════════════════════════ */
+.projects-section {
+    background-color: var(--bg-2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+.projects-inner {
+    max-width: 1280px; margin: 0 auto; padding: 7rem 2rem;
+}
+.projects-hd { margin-bottom: 3rem; }
+.projects-title {
+    font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; color: var(--text);
+}
+.projects-sub {
+    font-size: 1rem; color: var(--text-2); margin-top: 0.5rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* --- Project card --- */
+.project-card {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    background-color: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: border-color 300ms ease, box-shadow 300ms ease;
+}
+.project-card:hover {
+    border-color: rgba(59,130,246,0.25);
+    box-shadow: 0 8px 40px rgba(59,130,246,0.06);
+}
+
+.project-img {
+    position: relative;
+    overflow: hidden;
+    min-height: 280px;
+}
+.project-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 500ms ease;
+}
+.project-card:hover .project-img img {
+    transform: scale(1.04);
+}
+.project-img-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, transparent 40%, var(--surface) 100%);
+    pointer-events: none;
+}
+
+.project-body {
+    padding: 2.5rem 2.5rem 2.25rem;
+    display: flex; flex-direction: column; justify-content: center;
+}
+
+.project-tag {
+    display: inline-flex; align-items: center; gap: 0.45rem;
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: #22c55e;
+    margin-bottom: 1.25rem; width: fit-content;
+}
+.project-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #22c55e;
+    animation: badge-pulse 2.5s ease-in-out infinite;
+}
+
+.project-name {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 900; color: var(--text);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.875rem;
+}
+
+.project-desc {
+    font-size: 0.9375rem; color: var(--text-2);
+    line-height: 1.75; max-width: 420px;
+    margin-bottom: 2rem;
+}
+
+.project-links {
+    display: flex; gap: 0.625rem; flex-wrap: wrap;
+}
+.project-link {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.875rem; font-weight: 500; color: var(--text-2);
+    padding: 0.55rem 1.1rem;
+    border: 1px solid var(--border-strong); border-radius: 8px;
+    cursor: pointer;
+    transition: color 200ms ease, border-color 200ms ease, background-color 200ms ease;
+}
+.project-link:hover {
+    color: var(--text); border-color: var(--text-3);
+    background-color: var(--bg-2);
+}
+.project-link svg { flex-shrink: 0; }
+
+.project-link--primary {
+    background-color: var(--text); color: var(--bg);
+    border-color: var(--text);
+}
+.project-link--primary:hover {
+    opacity: 0.85; background-color: var(--text); color: var(--bg);
+    border-color: var(--text);
+}
+
 /* ═══════════════════════════════════════════════════════════════
    6. JOIN
    ═══════════════════════════════════════════════════════════════ */
@@ -475,7 +594,8 @@ html:not(.dark) .nav-header.scrolled {
     html.js-anim .hero-footer, html.js-anim .bridge-inner, html.js-anim .founder-visual,
     html.js-anim .founder-meta, html.js-anim .founder-name, html.js-anim .founder-bio,
     html.js-anim .founder-email, html.js-anim .members-hd, html.js-anim .member-wall-card,
-    html.js-anim .join-headline, html.js-anim .join-form { opacity: 1 !important; transform: none !important; }
+    html.js-anim .join-headline, html.js-anim .join-form,
+    html.js-anim .projects-hd, html.js-anim .project-card { opacity: 1 !important; transform: none !important; }
     .intro-body .w { opacity: 1 !important; }
 }
 
@@ -486,6 +606,7 @@ html:not(.dark) .nav-header.scrolled {
     .founder-content { padding: 4rem 3rem; }
     .join-inner { grid-template-columns: 1fr; gap: 3rem; }
     .members-wall { grid-template-columns: repeat(3, 1fr); }
+    .project-card { grid-template-columns: 1fr 1fr; }
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -532,6 +653,13 @@ html:not(.dark) .nav-header.scrolled {
     .intro-section { padding: 5rem 1.25rem; }
     .members-inner { padding: 5rem 1.25rem; }
     .footer-inner { flex-direction: column; align-items: flex-start; }
+
+    .project-card {
+        grid-template-columns: 1fr;
+    }
+    .project-img { min-height: 200px; max-height: 240px; }
+    .project-body { padding: 1.75rem 1.5rem 2rem; }
+    .projects-inner { padding: 5rem 1.25rem; }
 }
 
 /* ═══════════════════════════════════════════════════════════════
