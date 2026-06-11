@@ -8,7 +8,7 @@
 | Syed Fahad | Senior Narcotics Officer | Built the entire Website from the ground up | i250984@isb.nu.edu.pk |
 | Hammad Rehan | Technical lead | Created the readMe |i250816@isb.nu.edu.pk|
 | Ali Raza butt | Chief financial officer| - | i250656@isb.nu.edu.pk|
-| Wajeeha Imran | President | - | i250632@isb.nu.edu.pk| 
+| Wajeeha Imran | President | |Created 2.0 | | i250632@isb.nu.edu.pk| 
 | Talha Khusro ghous | Chairman | - | i250977@isb.nu.edu.pk | 
 
 ## Languages Used  
